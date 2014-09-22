@@ -14,16 +14,22 @@ jQuery(document).ready(function($) {
         ));
     });
     $.backstretch(['img/background-01.jpg']);
-    $('#contactform').submit(function() {
+    $('#newsletter').submit(function(e) {
+        Parse.initialize(
+            "twBPt9IZ1Epyk2t1B305TfBOTmFEFfxXHOJqoF4w",
+            "GKNz5uowPjQvWOa9IglZiTDg5FxTGE3z2uSFOfKH");
+        e.preventDefault();
         var action = $(this).attr('action');
         $("#message").fadeIn("100", function() {
             $('#message').hide();
-            $.post(action, {
-                email: $('#email').val()
-            }, function(data) {
-                document.getElementById(
-                        'message').innerHTML =
-                    data;
+            var Email = Parse.Object.extend("Email");
+            var email = new Email();
+            email.save({
+                address: $('#email').val()
+            }).then(function(object) {
+                $('#message').html(
+                    "Subscribed!");
+                $('#email').val("");
                 $('#message').fadeIn("100");
             });
         });

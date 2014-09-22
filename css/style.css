@@ -100,18 +100,7 @@ a:hover {
 }
 
 #logo {
-    background:url(../img/logo.png) no-repeat center;
-    text-indent:-9999px;
-    height:60px;
-    width:auto;
-    white-space:nowrap
-}
 
-#logo a {
-    color:#fff;
-    font-size:16px;
-    line-height:1;
-    outline:none
 }
 
 h1,p {
@@ -346,15 +335,6 @@ p {
 #newsletter input[type="submit"][disabled] {
     background:#939898;
     color:#fff
-}
-
-#message {
-    position:absolute;
-    width:500px;
-    left:50%;
-    margin-left:-250px;
-    text-align:center;
-    z-index:995
 }
 
 .error-message {
