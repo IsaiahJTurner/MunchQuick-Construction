@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
         $("#preload").delay(800).fadeOut("400");
     });
     $('input, textarea').placeholder();
-    $('#clock').countdown('2014/9/30', function(event) {
+    $('#clock').countdown('2014/10/20', function(event) {
         $(this).html(event.strftime('' +
             '<div class="clock-section"><span>%D</span> <p>days</p></div> ' +
             '<div class="clock-section"><span>%H</span> <p>hours</p></div> ' +
